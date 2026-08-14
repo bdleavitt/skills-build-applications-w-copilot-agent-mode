@@ -3,10 +3,10 @@ import { connectToDatabase } from './config/database.js';
 import { Activity, LeaderboardEntry, Team, User, Workout } from './models/index.js';
 
 const app = express();
-const port = Number(process.env.PORT) || 8000;
+const port = 8000;
 const codespaceName = process.env.CODESPACE_NAME;
 const baseUrl = codespaceName
-  ? `https://${codespaceName}-${port}.app.github.dev`
+  ? `https://${codespaceName}-8000.app.github.dev`
   : `http://localhost:${port}`;
 
 app.use(express.json());
