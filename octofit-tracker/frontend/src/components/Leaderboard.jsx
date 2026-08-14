@@ -3,7 +3,7 @@ import CollectionView from './CollectionView.jsx';
 function Leaderboard() {
   return (
     <CollectionView
-      endpoint="/leaderboard/"
+      endpoint="/api/leaderboard/"
       title="Leaderboard"
       description="A friendly nudge for every team member to keep showing up."
       columns={[

@@ -3,7 +3,7 @@ import CollectionView from './CollectionView.jsx';
 function Workouts() {
   return (
     <CollectionView
-      endpoint="/workouts/"
+      endpoint="/api/workouts/"
       title="Workouts"
       description="Choose a session that fits the day and keeps your goals moving."
       columns={[

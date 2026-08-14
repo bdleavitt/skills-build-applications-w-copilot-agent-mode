@@ -3,7 +3,7 @@ import CollectionView from './CollectionView.jsx';
 function Users() {
   return (
     <CollectionView
-      endpoint="/users/"
+      endpoint="/api/users/"
       title="Athletes"
       description="Meet the people making progress across the OctoFit community."
       columns={[

@@ -3,7 +3,7 @@ import CollectionView from './CollectionView.jsx';
 function Activities() {
   return (
     <CollectionView
-      endpoint="/activities/"
+      endpoint="/api/activities/"
       title="Activity log"
       description="See the movement that is powering your team's momentum."
       columns={[

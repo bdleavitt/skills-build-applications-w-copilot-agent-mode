@@ -3,7 +3,7 @@ import CollectionView from './CollectionView.jsx';
 function Teams() {
   return (
     <CollectionView
-      endpoint="/teams/"
+      endpoint="/api/teams/"
       title="Teams"
       description="Find your crew, their coach, and the goals you are chasing together."
       columns={[
