@@ -1,0 +1,21 @@
+const codespaceName = import.meta.env.VITE_CODESPACE_NAME?.trim();
+
+export const apiBaseUrl = codespaceName
+  ? `https://${codespaceName}-8000.app.github.dev/api`
+  : 'http://localhost:8000/api';
+
+export async function fetchCollection(endpoint) {
+  const response = await fetch(`${apiBaseUrl}${endpoint}`);
+
+  if (!response.ok) {
+    throw new Error(`The API returned ${response.status}.`);
+  }
+
+  const payload = await response.json();
+
+  if (Array.isArray(payload)) {
+    return payload;
+  }
+
+  return payload.results || payload.data || payload.items || payload.docs || [];
+}
